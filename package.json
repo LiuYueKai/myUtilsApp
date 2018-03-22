@@ -1,0 +1,32 @@
+{
+  "name": "myUtilsApp",
+  "version": "0.1.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --debug",
+    "package":"electron-packager ./ myUtilsApp -all",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LiuYueKai/myUtilsApp.git"
+  },
+  "author": "LiuYueKai (liuyuekainihao@163.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LiuYueKai/myUtilsApp.git/issues"
+  },
+  "homepage": "https://github.com/LiuYueKai/myUtilsApp.git#readme",
+  "devDependencies": {
+    "electron": "~1.8.2",
+    "electron-packager": "^8.7.0",
+    "electron-reload": "latest",
+    "glob": "^7.1.2"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "ztree": "^3.5.24"
+  }
+}

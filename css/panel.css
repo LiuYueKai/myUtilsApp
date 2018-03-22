@@ -1,0 +1,40 @@
+
+.ifbp-panel {
+  background-color: #fff;
+  margin: 0px;
+  padding: 16px;
+  border-top: #eeeff1 solid 8px;
+}
+
+.ifbp-panel:first-child {
+  border-top: 0px;
+}
+
+.ifbp-panel-title {
+  line-height: 24px;
+  position: relative;
+}
+.ifbp-panel-title h3 {
+  font-size: 16px;
+  color: #2D2D2D;
+  font-weight: bold;
+  display: inline-block;
+  height: 16px;
+  line-height: 16px;
+  margin-bottom: 16px !important;
+}
+.ifbp-panel-title i {
+  color: #5CB0E6;
+  margin-left: 16px;
+  cursor: pointer;
+}
+
+.ifbp-panel-body {
+  position: relative;
+}
+.ifbp-panel-body .el-form {
+  margin-top: 24px;
+}
+.ifbp-panel-body .el-table {
+  margin-top: 20px;
+}
