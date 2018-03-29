@@ -3,6 +3,7 @@ const dialog = require('electron').dialog;
 const fs = require('fs');
 const path = require("path");
 const spawn = require('child_process').spawn;
+const sudo = require('sudo');
 const shell = require('electron').shell
 var filesArr = [];
 
@@ -68,5 +69,15 @@ ipc.on('addDNSClick', function (event) {
 
 ipc.on('emptyDNSClick', function (event) {
     const ls = spawn('networksetup', ['-setdnsservers', 'Wi-Fi','empty']);
+    spawnLog(ls, event);
+})
+
+ipc.on('openNginxClick', function (event) {
+    const ls = spawn('sudo', ['nginx']);
+    spawnLog(ls, event);
+})
+
+ipc.on('closeNginxClick', function (event) {
+    const ls = spawn('sudo', ['nginx', '-s','stop']);
     spawnLog(ls, event);
 })
