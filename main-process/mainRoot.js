@@ -30,7 +30,12 @@ ipc.on('buildElementClick', function (event) {
 })
 
 ipc.on('elementToApClick', function (event) {
-    const ls = spawn('cp', ['-R', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ifbp-element/lib/', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ap-fe-optimze/node_modules/ifbp-element/lib']);
+    const ls0 = spawn('cp', ['-R', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ifbp-element/lib/', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ap-fe-optimze/node_modules/ifbp-element/lib']);
+    ls0.stderr.on('data', (data) => {
+        console.log(`stderr: ${data}`);
+        // event.sender.send('res', '执行失败：' + data);
+    });
+    const ls = spawn('cp', ['-R', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ifbp-element/lib/index.js', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ap-fe-optimze/legacy/trd/ifbp-element/']);
     spawnLog(ls, event);
 })
 
