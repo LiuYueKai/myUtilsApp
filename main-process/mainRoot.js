@@ -84,11 +84,11 @@ ipc.on('emptyDNSClick', function (event) {
 })
 
 ipc.on('openNginxClick', function (event) {
-    const ls = spawn('nginx');
+    const ls = spawn('/usr/local/nginx/sbin/nginx');
     spawnLog(ls, event);
 })
 
 ipc.on('closeNginxClick', function (event) {
-    const ls = spawn('nginx', ['-s','stop']);
+    const ls = spawn('/usr/local/nginx/sbin/nginx', ['-s','stop']);
     spawnLog(ls, event);
 })
