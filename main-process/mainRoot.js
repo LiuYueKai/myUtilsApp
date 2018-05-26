@@ -35,6 +35,16 @@ ipc.on('elementToApClick', function (event) {
         console.log(`stderr: ${data}`);
         // event.sender.send('res', '执行失败：' + data);
     });
+    const ls1 = spawn('cp', ['-R', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ifbp-element/lib/theme-default/', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ap-fe-optimze/legacy/trd/ifbp-element/theme-default']);
+    ls1.stderr.on('data', (data) => {
+        console.log(`stderr: ${data}`);
+        // event.sender.send('res', '执行失败：' + data);
+    });
+    const ls2 = spawn('cp', ['-R', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ifbp-element/lib/theme-red/', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ap-fe-optimze/legacy/trd/ifbp-element/theme-red']);
+    ls2.stderr.on('data', (data) => {
+        console.log(`stderr: ${data}`);
+        // event.sender.send('res', '执行失败：' + data);
+    });
     const ls = spawn('cp', ['-R', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ifbp-element/lib/index.js', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ap-fe-optimze/legacy/trd/ifbp-element/']);
     spawnLog(ls, event);
 })
