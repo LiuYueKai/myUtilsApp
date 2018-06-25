@@ -56,7 +56,7 @@ ipc.on('elementToUIClick', function (event) {
 
 
 ipc.on('openITermClick', function (event) {
-    const ls = spawn('open', ['-a', 'iTerm', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ap-fe-optimze', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ifbp-element', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ifbp-uitemplate-fe']);
+    const ls = spawn('open', ['-a', 'iTerm', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ap-fe-optimze', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ifbp-ap', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ifbp-element', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ifbp-uitemplate-fe']);
     spawnLog(ls, event);
 })
 
