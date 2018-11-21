@@ -12,7 +12,7 @@ function buttonClick(id) {
 }
 
 // 循环添加按钮监听
-const buttonIds = ['elementToAp', 'elementToApPub', 'elementToUI', 'otherElementToAp','openITerm', 'addDNS', 'emptyDNS', 'openNginx', 'closeNginx'];
+const buttonIds = ['elementToAp', 'elementToApPub', 'elementToUI', 'elementToApFbp', 'elementToApMobile', 'otherElementToAp','openITerm', 'addDNS', 'emptyDNS', 'openNginx', 'closeNginx'];
 buttonIds.forEach((buttonId) => {
 	buttonClick(buttonId)
 })
