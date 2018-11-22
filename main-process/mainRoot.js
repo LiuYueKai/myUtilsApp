@@ -126,24 +126,24 @@ ipc.on('elementToApFbpClick', function (event) {
 })
 
 ipc.on('elementToApMobileClick', function (event) {
-    const ls0 = spawn('cp', ['-R', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ifbp-element/lib/', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ap-fe-optimze/node_modules/ifbp-element/lib']);
+    const ls0 = spawn('cp', ['-R', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ifbp-element/lib-mobile/', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ap-fe-optimze/node_modules/ifbp-element/lib-mobile']);
     ls0.stderr.on('data', (data) => {
         console.log(`stderr: ${data}`);
         // event.sender.send('res', '执行失败：' + data);
     });
-    const ls1 = spawn('cp', ['-R', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ifbp-element/lib/theme-default/', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ap-fe-optimze/legacy/trd/ifbp-element/theme-default']);
+    const ls1 = spawn('cp', ['-R', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ifbp-element/lib-mobile/theme-default/', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ap-fe-optimze/legacy/trd/ifbp-element/theme-default']);
     ls1.stderr.on('data', (data) => {
         console.log(`stderr: ${data}`);
         // event.sender.send('res', '执行失败：' + data);
     });
     
-    const ls3 = spawn('cp', ['-R', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ifbp-element/lib/index-mobile.js', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ap-fe-optimze/legacy/trd/ifbp-element/']);
+    const ls3 = spawn('cp', ['-R', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ifbp-element/lib-mobile/index-mobile.js', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ap-fe-optimze/legacy/trd/ifbp-element/']);
     ls3.stderr.on('data', (data) => {
         console.log(`stderr: ${data}`);
         // event.sender.send('res', '执行失败：' + data);
     });
     
-    const ls = spawn('cp', ['-R', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ifbp-element/lib/index-mobile.min.js', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ap-fe-optimze/legacy/trd/ifbp-element/']);
+    const ls = spawn('cp', ['-R', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ifbp-element/lib-mobile/index-mobile.min.js', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ap-fe-optimze/legacy/trd/ifbp-element/']);
     spawnLog(ls, event);
 })
 
