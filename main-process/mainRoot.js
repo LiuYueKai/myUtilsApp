@@ -126,24 +126,44 @@ ipc.on('elementToApFbpClick', function (event) {
 })
 
 ipc.on('elementToApMobileClick', function (event) {
-    const ls0 = spawn('cp', ['-R', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ifbp-element/lib-mobile/', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ap-fe-mobile/node_modules/ifbp-element/lib-mobile']);
+    const ls0 = spawn('cp', ['-R', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ifbp-element/lib-mobile/', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/mobile/ap-fe-mobile/node_modules/ifbp-element/lib-mobile']);
     ls0.stderr.on('data', (data) => {
         console.log(`stderr: ${data}`);
         // event.sender.send('res', '执行失败：' + data);
     });
-    const ls1 = spawn('cp', ['-R', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ifbp-element/lib-mobile/theme-default/', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ap-fe-mobile/legacy/trd/ifbp-element/theme-default']);
+    const ls1 = spawn('cp', ['-R', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ifbp-element/lib-mobile/theme-default/', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/mobile/ap-fe-mobile/legacy/trd/ifbp-element/theme-default']);
     ls1.stderr.on('data', (data) => {
         console.log(`stderr: ${data}`);
         // event.sender.send('res', '执行失败：' + data);
     });
     
-    const ls3 = spawn('cp', ['-R', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ifbp-element/lib-mobile/index-mobile.js', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ap-fe-mobile/legacy/trd/ifbp-element/']);
+    const ls3 = spawn('cp', ['-R', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ifbp-element/lib-mobile/index-mobile.js', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/mobile/ap-fe-mobile/legacy/trd/ifbp-element/']);
     ls3.stderr.on('data', (data) => {
         console.log(`stderr: ${data}`);
         // event.sender.send('res', '执行失败：' + data);
     });
     
-    const ls = spawn('cp', ['-R', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ifbp-element/lib-mobile/index-mobile.min.js', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ap-fe-mobile/legacy/trd/ifbp-element/']);
+    const ls = spawn('cp', ['-R', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ifbp-element/lib-mobile/index-mobile.min.js', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/mobile/ap-fe-mobile/legacy/trd/ifbp-element/']);
+    spawnLog(ls, event);
+})
+
+ipc.on('elementToApPubMobileClick', function (event) {
+    const ls1 = spawn('cp', ['-R', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ifbp-element/lib-mobile/theme-default/', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/mobile/ap-pub-mobile-fe/static/ap-mobile/trd/ifbp-element/theme-default']);
+    ls1.stderr.on('data', (data) => {
+        console.log(`stderr: ${data}`);
+        // event.sender.send('res', '执行失败：' + data);
+    });
+    const ls2 = spawn('cp', ['-R', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ifbp-element/lib-mobile/theme-red/', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/mobile/ap-pub-mobile-fe/static/ap-mobile/trd/ifbp-element/theme-red']);
+    ls2.stderr.on('data', (data) => {
+        console.log(`stderr: ${data}`);
+        // event.sender.send('res', '执行失败：' + data);
+    });
+    const ls3 = spawn('cp', ['-R', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ifbp-element/lib-mobile/index-mobile.js', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/mobile/ap-pub-mobile-fe/static/ap-mobile/trd/ifbp-element/']);
+    ls3.stderr.on('data', (data) => {
+        console.log(`stderr: ${data}`);
+        // event.sender.send('res', '执行失败：' + data);
+    });
+    const ls = spawn('cp', ['-R', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ifbp-element/lib-mobile/index-mobile.min.js', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/mobile/ap-pub-mobile-fe/static/ap-mobile/trd/ifbp-element/']);
     spawnLog(ls, event);
 })
 
@@ -199,7 +219,7 @@ ipc.on('otherElementToApClick', function (event) {
 
 
 ipc.on('openITermClick', function (event) {
-    const ls = spawn('open', ['-a', 'iTerm', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ap-fe-optimze', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ap-pub-fe', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ifbp-element', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ifbp-uitemplate-fe', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ap-fe-mobile']);
+    const ls = spawn('open', ['-a', 'iTerm', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ap-fe-optimze', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ap-pub-fe', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ifbp-element', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/ifbp-uitemplate-fe', '/Users/liuyk/iCloudDrive-old/code/0jinrong/finance/mobile/ap-fe-mobile']);
     spawnLog(ls, event);
 })
 
